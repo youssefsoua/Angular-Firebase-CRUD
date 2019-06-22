@@ -1,0 +1,60 @@
+<form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+  <div class="contoles-container">
+    <input type="hidden" formControlName="$key" />
+    <mat-form-field>
+      <input matInput placeholder="First Name" formControlName="firstName" />
+      <mat-error>Please enter your first name</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Last Name" formControlName="lastName" />
+      <mat-error>Please enter your last name</mat-error>
+    </mat-form-field>
+    <div>
+      <label class="label-radio-button">Gender </label>
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button class="space-row" value="1">Male</mat-radio-button>
+        <mat-radio-button class="space-row" value="2">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <mat-form-field>
+      <input matInput placeholder="e-mail" formControlName="email" />
+      <mat-error>Invalid email address </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Address" formControlName="address" />
+      <mat-error>Please enter your address</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="City" formControlName="city" />
+      <mat-error>Please enter your city</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="State" formControlName="state" />
+      <mat-error>Please enter your state</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Order" formControlName="order" />
+      <mat-error>Please enter your order</mat-error>
+    </mat-form-field>
+    <div align="right">
+      <button
+        class="space-row"
+        mat-raised-button
+        color="warn"
+        (click)="onClose()"
+      >
+        Cancel
+      </button>
+      <button
+        class="space-row"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="service.form.invalid"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

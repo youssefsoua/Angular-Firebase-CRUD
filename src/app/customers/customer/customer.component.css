@@ -1,0 +1,19 @@
+div.comtainer {
+  margin: 0px 40px;
+}
+
+form.normal-form {
+  margin: 10px;
+}
+
+.contoles-container {
+  width: 100%;
+  padding: 5%;
+}
+
+.contoles-container > * {
+  width: 100%;
+}
+.label-radio-button {
+  margin-right: 5px;
+}
